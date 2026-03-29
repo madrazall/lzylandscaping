@@ -99,6 +99,27 @@ input, select, textarea {
 		background-image: radial-gradient(circle at 20% 20%, rgba(52, 255, 44, 0.17), transparent 40%), radial-gradient(circle at 80% 20%, rgba(60, 255, 100, 0.12), transparent 45%), linear-gradient(180deg, #000 0%, #050505 100%);
 		background-attachment: fixed;
 		color: #fff;
+		position: relative;
+	}
+
+	body::after {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: radial-gradient(circle at 85% 20%, rgba(30, 255, 60, 0.22) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(24, 220, 70, 0.18) 0%, transparent 55%); 
+		pointer-events: none;
+		mix-blend-mode: screen;
+	}
+
+	#banner::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: radial-gradient(circle at 100px 120px, rgba(80,255,120,0.45) 0px, transparent 30px), radial-gradient(circle at 470px 90px, rgba(80,255,120,0.25) 0px, transparent 55px);
+		pointer-events: none;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {

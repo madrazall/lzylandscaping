@@ -122,6 +122,15 @@ input, select, textarea {
 		pointer-events: none;
 	}
 
+	#topbar {
+		box-shadow: 0 2px 12px rgba(0,0,0,0.45);
+	}
+
+	#topbar a:hover {
+		filter: brightness(1.12);
+	}
+
+
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Seasonal Cleanup — Spring & Fall | LZY Landscaping</title>
+<meta name="description" content="Seasonal Cleanup services in Cromwell, CT and surrounding areas. Free estimates. LZY Landscaping — Spring & Fall Property Refresh." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css" />
+<style>
+  /* Service page specific styles */
+  .service-hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 48px 60px;
+    overflow: hidden;
+  }
+  .service-hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(26,28,26,0.4) 0%, rgba(26,28,26,0.75) 60%, var(--charcoal) 100%),
+      url('../images/hero-cleanup.jpg') center/cover no-repeat;
+  }
+  .service-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+  }
+  .service-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .service-hero h1 span {
+    color: var(--neon);
+  }
+  .service-hero-sub {
+    font-size: 1.05rem;
+    color: var(--gray-light);
+    line-height: 1.6;
+    max-width: 520px;
+    font-weight: 300;
+  }
+  .breadcrumb {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--neon);
+    margin-bottom: 20px;
+  }
+  .breadcrumb a {
+    color: var(--neon);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .breadcrumb a:hover { opacity: 1; }
+  .breadcrumb span { opacity: 0.5; margin: 0 8px; }
+
+  .service-detail {
+    background: var(--charcoal-2);
+    padding: 80px 48px;
+  }
+  .service-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .service-detail-text {
+    max-width: 520px;
+  }
+  .service-detail-text h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    letter-spacing: 0.04em;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  .service-detail-text p {
+    font-size: 0.95rem;
+    color: var(--gray-light);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--charcoal-3);
+  }
+  .feature-item {
+    background: var(--charcoal-2);
+    padding: 28px;
+    transition: background 0.3s;
+  }
+  .feature-item:hover {
+    background: #303530;
+  }
+  .feature-item h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .feature-item p {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  .service-gallery {
+    padding: 80px 48px;
+  }
+  .service-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 280px;
+    gap: 6px;
+    margin-top: 48px;
+  }
+
+  .service-cta {
+    background: var(--charcoal-2);
+    padding: 80px 48px;
+    text-align: center;
+  }
+  .service-cta h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: 0.04em;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .service-cta p {
+    font-size: 1rem;
+    color: var(--gray-light);
+    max-width: 560px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+  }
+  .service-cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .other-services {
+    padding: 60px 48px;
+    border-top: 1px solid var(--charcoal-3);
+  }
+  .other-services h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 900px) {
+    .service-detail-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+    .service-gallery-grid {
+      grid-template-rows: 200px;
+    }
+    .service-hero {
+      padding: 0 24px 40px;
+    }
+    .service-detail, .service-gallery, .service-cta, .other-services {
+      padding: 60px 24px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/logo.png" alt="LZY Landscaping" style="height:60px;" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#services">What We Do</a></li>
+    <li><a href="../index.html#work">Our Work</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <a href="../index.html#contact" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="service-hero">
+  <div class="service-hero-bg"></div>
+  <div class="service-hero-content">
+    <div class="breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="../index.html#services">Services</a><span>/</span>Seasonal Cleanup</div>
+    <h1>Seasonal Cleanup<br><span>Spring & Fall Property Refresh</span></h1>
+    <p class="service-hero-sub">Prep Your Property for the Season Ahead</p>
+  </div>
+</section>
+
+<!-- DETAIL -->
+<section class="service-detail">
+  <div class="service-detail-grid">
+    <div class="service-detail-text">
+      <div class="section-label">What We Offer</div>
+      <h2>Prep Your Property for the Season Ahead</h2>
+      <p>Spring and fall cleanups do more than tidy up — they protect your lawn and beds from disease, pests, and winter damage. We handle the heavy lifting so you don't spend your weekends wrestling leaves and branches.</p>
+      <p>Every project starts with a free on-site consultation. We walk your property, discuss your goals, and provide a clear, itemized estimate — no hidden fees, no pressure.</p>
+      <div style="margin-top: 28px;">
+        <a href="../index.html#contact" class="btn-primary">Schedule Your Cleanup</a>
+      </div>
+    </div>
+    <div class="features-grid">
+      
+        <div class="step reveal">
+          <div class="step-title">Spring Cleanup</div>
+          <div class="step-desc">Bed clearing, deadwood removal, lawn dethatching, and early-season mowing prep. We get your property ready to thrive from day one.</div>
+        </div>
+        <div class="step reveal reveal-d1">
+          <div class="step-title">Fall Leaf Removal</div>
+          <div class="step-desc">Complete leaf removal from lawns, beds, and hardscapes. We haul away or mulch depending on your preference and property conditions.</div>
+        </div>
+        <div class="step reveal reveal-d2">
+          <div class="step-title">Pruning & Cutting Back</div>
+          <div class="step-desc">Seasonal pruning of shrubs and perennials for healthy growth next season. We know what to cut, what to leave, and when to do it.</div>
+        </div>
+        <div class="step reveal reveal-d3">
+          <div class="step-title">Mulch & Bed Refresh</div>
+          <div class="step-desc">Old mulch turned or refreshed, edges redefined, and beds prepped for winter protection or spring planting.</div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="service-gallery">
+  <div class="work-header" style="margin-bottom: 0;">
+    <div>
+      <div class="section-label">Portfolio</div>
+      <h2 class="section-title">Seasonal Cleanup Work</h2>
+    </div>
+  </div>
+  <div class="service-gallery-grid">
+    
+        <div class="gallery-item" style="grid-column: span 4; grid-row: span 1;">
+          <img src="../images/hero-cleanup.jpg" alt="Fall Leaf Removal in Progress" />
+          <div class="overlay"><span class="overlay-tag">Fall Leaf Removal in Progress</span></div>
+        </div>
+        <div class="gallery-item" style="grid-column: span 4; grid-row: span 1;">
+          <img src="../images/gallery-03.jpg" alt="Seasonal Bed Cleanup" />
+          <div class="overlay"><span class="overlay-tag">Seasonal Bed Cleanup</span></div>
+        </div>
+        <div class="gallery-item" style="grid-column: span 4; grid-row: span 1;">
+          <img src="../images/gallery-01.jpg" alt="Post-Cleanup Lawn & Bed" />
+          <div class="overlay"><span class="overlay-tag">Post-Cleanup Lawn & Bed</span></div>
+        </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="service-cta">
+  <h2>Ready to Get Started?</h2>
+  <p>We serve Cromwell and surrounding communities throughout Hartford County. Estimates are always free, and we typically respond within one business day.</p>
+  <div class="service-cta-buttons">
+    <a href="../index.html#contact" class="btn-primary">Schedule Your Cleanup</a>
+    <a href="tel:8608980991" class="btn-ghost">Call (860) 898-0991</a>
+  </div>
+</section>
+
+<!-- OTHER SERVICES -->
+<section class="other-services">
+  <h3>Explore Other Services</h3>
+  <div>
+    <a href="./lawn-maintenance.html" class="btn-ghost" style="margin-right:8px; margin-bottom:8px;">Lawn Maintenance</a><a href="./hardscaping.html" class="btn-ghost" style="margin-right:8px; margin-bottom:8px;">Hardscaping</a><a href="./stone-walls.html" class="btn-ghost" style="margin-right:8px; margin-bottom:8px;">Stone Walls & Steps</a><a href="./grading-drainage.html" class="btn-ghost" style="margin-right:8px; margin-bottom:8px;">Grading & Drainage</a>
+    <a href="../index.html#services" class="btn-ghost" style="margin-bottom:8px;">All Services →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Site by Madrazall Built.</div>
+  <div class="footer-copy">© 2025 LZY Landscaping — Cromwell, CT. All rights reserved.</div>
+  <ul class="footer-links">
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#work">Portfolio</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

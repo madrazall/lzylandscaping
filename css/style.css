@@ -858,6 +858,281 @@
   .reveal-d4 { transition-delay: 0.4s; }
 
   /* ── RESPONSIVE MOBILE ── */
+  @media (max-width: 1000px) {
+    nav {
+      padding: 14px 24px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .nav-logo {
+      padding: 8px 12px;
+      border-radius: 12px;
+    }
+
+    .nav-links {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .nav-links a {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-cta {
+      width: auto;
+      min-width: 210px;
+    }
+
+    .hero {
+      padding: 110px 24px 60px;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 8vw, 5rem);
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      width: 100%;
+    }
+
+    .hero-stats {
+      position: static;
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      text-align: left;
+    }
+
+    .hero-stats .stat-num {
+      font-size: 1.9rem;
+    }
+
+    section {
+      padding: 90px 24px;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 28px 24px;
+    }
+
+    .work-header {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 20px;
+    }
+
+    .gallery {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 220px;
+      gap: 12px;
+    }
+
+    .g1 { grid-column: 1 / 3; grid-row: 1; }
+    .g2 { grid-column: 1 / 2; grid-row: 2; }
+    .g3 { grid-column: 2 / 3; grid-row: 2; }
+    .g4 { grid-column: 1 / 2; grid-row: 3; }
+    .g5 { grid-column: 2 / 3; grid-row: 3; }
+    .g6 { grid-column: 1 / 3; grid-row: 4; }
+
+    .testimonial-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    nav {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .nav-cta {
+      width: 100%;
+      max-width: none;
+    }
+
+    .hero {
+      padding: 120px 20px 50px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 12vw, 3.8rem);
+    }
+
+    .hero-stats {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .work-header {
+      align-items: stretch;
+    }
+
+    .gallery {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 220px;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .step {
+      padding: 28px 22px;
+      border-right: none;
+      border-bottom: 1px solid var(--charcoal-3);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    #about {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .about-img {
+      height: auto;
+    }
+
+    .about-img-placeholder {
+      width: 100%;
+      height: 320px;
+    }
+
+    .about-img-accent-placeholder {
+      position: relative;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 210px;
+      border-width: 0;
+    }
+
+    #contact {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .footer-links {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    nav {
+      padding: 12px 16px;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .nav-logo,
+    .nav-cta {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .nav-links {
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      font-size: 0.68rem;
+    }
+
+    .hero {
+      padding: 120px 16px 40px;
+    }
+
+    .section {
+      padding: 70px 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.9rem, 16vw, 3.2rem);
+    }
+
+    .hero-tag,
+    .section-body,
+    .service-name,
+    .service-desc,
+    .overlay-tag,
+    .footer-copy,
+    .footer-links a {
+      font-size: 0.82rem;
+    }
+
+    .btn-primary,
+    .btn-ghost,
+    .submit-btn {
+      padding: 14px 18px;
+      font-size: 0.85rem;
+    }
+
+    .service-card {
+      padding: 22px 18px;
+    }
+
+    .gallery {
+      gap: 10px;
+      grid-auto-rows: 200px;
+    }
+
+    .gallery-item {
+      min-height: 200px;
+    }
+
+    .hero-stats {
+      display: none;
+    }
+
+    .about-img-placeholder {
+      height: 280px;
+    }
+
+    .about-img-accent-placeholder {
+      height: 180px;
+    }
+  }
+
+  /* ── RESPONSIVE MOBILE ── */
   @media (max-width: 900px) {
     nav {
       padding: 14px 24px;
